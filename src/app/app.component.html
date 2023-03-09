@@ -1,0 +1,68 @@
+<div class="container">
+  <div class="header">
+    <!-- Banner Area -->
+    <div class="header_banner">
+      <h2> title</h2>
+      <div class="header_button" [ngStyle]="{
+        'background-image':'linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.3)), url('+headerBGUrl+')'
+      }">
+        <button class="playbutton">
+          <mat-icon>arrow_right</mat-icon>
+          <span>More Info</span>
+        </button>
+      </div>
+    </div>
+    <!-- banner End -->
+
+    <!-- main area -->
+
+    <div class="header-main" id="stickyHeader" [class.sticky]="sticky" #stickyHeader>
+
+      <div class="header_left">
+
+        <a routerLink="/">
+          <img src="../assets/netflixlogo.svg" alt="">
+        </a>
+        <ul>
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">TV Shoes</a></li>
+          <li><a href="#">Movies</a></li>
+          <li><a href="#">Latest</a></li>
+          <li><a href="#">List</a></li>
+        </ul>
+      </div>
+      <div class="header_right">
+        <ul>
+          <li><a href=""><mat-icon>
+            search
+          </mat-icon></a>
+          </li>
+          <li><a href="">Kids</a>
+          </li>
+          <li><a href=""><mat-icon>
+                card_giftcard
+              </mat-icon></a>
+          </li>
+          <li><a href=""><mat-icon>
+                notifications
+              </mat-icon></a>
+          </li>
+            <li> <img  alt="Avatar">
+            </li>
+        </ul>
+      </div>
+    </div>
+    <!-- main header ends here -->
+  </div>
+  <div class="body" style="margin-top: 30rem;">
+  <app-slider title="TRENDING" [movies]="trending" [sliderConfig]="sliderConfig"></app-slider>
+  <app-slider title="TOP RATED" [movies]="topRated" [sliderConfig]="sliderConfig"></app-slider>
+  <app-slider title="NOW PLAYING" [movies]="nowPlaying" [sliderConfig]="sliderConfig"></app-slider>
+  <app-slider title="ORGINALS" [movies]="originals" [sliderConfig]="sliderConfig"></app-slider>
+  <app-slider title="POPULAR" [movies]="popular" [sliderConfig]="sliderConfig"></app-slider>
+
+  
+  </div>
+
+
+</div>
